@@ -4,6 +4,7 @@
  */
 package com.mycompany.cch_number.of.occurences;
 
+import static com.mycompany.cch_number.of.occurences.NumberOfOccurences.sortArray;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -36,17 +37,7 @@ public class NumberOfOccurencesTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of main method, of class NumberOfOccurences.
-     */
-    @Test
-    public void testMain() {
-        System.out.println("main");
-        String[] args = null;
-        NumberOfOccurences.main(args);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+   
 
     /**
      * Test of sortArray method, of class NumberOfOccurences.
@@ -54,12 +45,12 @@ public class NumberOfOccurencesTest {
     @Test
     public void testSortArray() {
         System.out.println("sortArray");
-        char[] charArray = null;
-        String expResult = "";
-        String result = NumberOfOccurences.sortArray(charArray);
+        String input="srilanka";
+        String result = sortArray(input.toCharArray());
+        String expResult = "aaiklnrs";
+        
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       
     }
 
     /**
@@ -68,10 +59,11 @@ public class NumberOfOccurencesTest {
     @Test
     public void testCharacterOccurence() {
         System.out.println("characterOccurence");
-        String input = "";
-        NumberOfOccurences.characterOccurence(input);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String input = "SriLanka";
+        System.out.println(input);
+     
+        NumberOfOccurences.characterOccurence(input.toLowerCase().replace(" ", ""));
+        
     }
     
 }
