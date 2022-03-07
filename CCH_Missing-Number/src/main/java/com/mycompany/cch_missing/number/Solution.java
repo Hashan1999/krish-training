@@ -4,6 +4,8 @@
  */
 package com.mycompany.cch_missing.number;
 
+import java.util.Scanner;
+
 /**
  *
  * @author HASHA
@@ -11,18 +13,19 @@ package com.mycompany.cch_missing.number;
 public class Solution {
 
     public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+       String input = scan.nextLine();
         try {
-           String input = "-4,-3,-1,0,2";
-          //  String input = "1,3,4";
+           // String input = "1,2,4,5,6";
             String[] a = input.split(",");
             int[] convertedNumberArray = convertStringArrayIntoIntArray(a);
             sortArray(convertedNumberArray);
 
-            System.out.println(findMissingNumber(convertedNumberArray));
+            System.out.println("Missing Number - "+findMissingNumber(convertedNumberArray));
 
         } catch (NumberFormatException e) {
             System.out.println("Invalid Number List!!Enter only numbers  seperating using comma");
-        } catch (Exception e) {
+        } catch (Exception e) { 
             System.out.println(e.getMessage());
         }
 
@@ -57,12 +60,13 @@ public class Solution {
         int missingNumbersCount = 0;
         int missingNumber = 0;
         for (int index = 0; index < numbeArray.length - 1; index++) {
-        //    System.out.println(index + "/" + (numbeArray[index] + 1) + "/" + numbeArray[index + 1]);
+
             if ((numbeArray[index] + 1) == numbeArray[index + 1]) {
                 continue;
             } else {
-                int missingNumbersCountBetweenTwoNumber = (numbeArray[index]+1) - numbeArray[index];
-               // System.out.println(missingNumbersCountBetweenTwoNumber);
+                int missingNumbersCountBetweenTwoNumber = (numbeArray[index] + 1) - numbeArray[index];
+                
+
                 if (missingNumbersCountBetweenTwoNumber != 1) {
                     missingNumbersCount += missingNumbersCountBetweenTwoNumber;
                 } else {
