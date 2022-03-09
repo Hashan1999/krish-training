@@ -56,6 +56,7 @@ pom.xml.releaseBackup
 pom.xml.tag
 /CCH_Missing-Number/nbproject/
 /CCH_NumberOfOccurrence/nbproject/
+/Design Patterns/Memento Design Pattern/nbproject/
 
 # For NodeJS
 # https://raw.githubusercontent.com/github/gitignore/main/Node.gitignore
