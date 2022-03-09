@@ -1,0 +1,1 @@
+Find the third largest number from input array
