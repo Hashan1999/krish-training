@@ -13,7 +13,7 @@ public class Graph{
         edgeNode.addEdge(mainNode);
     }
 
-    public void traverseBreadthFirst(Node root){
+    public void traverseDepthFirst(Node root){
 //Stack FILO - First In Last out
             Stack<Node> stack=new  Stack<Node>();
             stack.add(root);
@@ -99,6 +99,6 @@ class Test{
         g.addEdge(node7, node4);
 
 
-        g.traverseBreadthFirst(node0);
+        g.traverseDepthFirst(node0);
     }
 }
