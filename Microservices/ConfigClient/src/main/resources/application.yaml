@@ -1,0 +1,6 @@
+
+spring:
+  application:
+    name: membership
+server:
+  port: 8191
