@@ -11,11 +11,11 @@ public class MemberProfileConfiguration {
     Environment environment;
 
     public String getDefaultModel() {
-        return environment.getProperty("vehicle.default.model");
+        return environment.getProperty("report.export.type");
     }
 
     public String getRentPeriod() {
-        return environment.getProperty("member.rent.,min");
+        return environment.getProperty("report.page.color");
     }
 
 }
